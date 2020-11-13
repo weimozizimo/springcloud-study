@@ -1,0 +1,20 @@
+server:
+  port: 8541
+spring:
+  application:
+    name: spring-cloud-consul-zuul
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name}
+zuul:
+  routes:
+    ribbon:
+      path: /ribbon/**
+      serviceId: spring-cloud-consul-consumer #转发到消费者/ribbon/
+    feign:
+      path: /feign/**
+      serviceId: spring-cloud-consul-consumer #转发到消费者/feign/
+#  prefix: /v1  可以通过这个配置加前缀 访问时就是 http://localhost:8541/v1/rinbbon/call
