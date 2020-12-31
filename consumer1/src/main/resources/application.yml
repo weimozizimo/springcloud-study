@@ -1,6 +1,13 @@
 server:
   port: 8521
 spring:
+  ##zipkin配置
+  ##zipkin配置
+  zipkin:
+    base-url: http://192.168.174.11:9411/
+  sleuth:
+    sampler:
+      probability: 1 #样本采集量，默认为0.1，为了测试这里修改为1，正式环境一般使用默认值。
   application:
     name: spring-cloud-consul-consumer
   cloud:

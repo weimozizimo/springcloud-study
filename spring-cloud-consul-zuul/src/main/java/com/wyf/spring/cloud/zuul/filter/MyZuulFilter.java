@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
 @Log4j2
-@Component
 public class MyZuulFilter extends ZuulFilter {
     @Override
     public String filterType() {

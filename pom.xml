@@ -75,6 +75,11 @@
                 </exclusion>
             </exclusions>
         </dependency>
+        <!--添加zipkin依赖-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-zipkin</artifactId>
+        </dependency>
 <!--        添加lombok-->
         <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
         <dependency>
