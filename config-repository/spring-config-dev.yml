@@ -1,0 +1,3 @@
+spring:
+  config:
+    hello: hello,this dev env configurations
