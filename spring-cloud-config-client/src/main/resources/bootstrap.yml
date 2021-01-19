@@ -1,0 +1,25 @@
+spring:
+  cloud:
+    consul:
+    host: localhost
+    port: 8500
+    discovery:
+      serviceName: spring-cloud-config-client    # 注册到consul的服务名称
+    config:
+      fail-fast: true
+      discovery:
+        enabled: true #开启服务发现
+        service-id: spring-cloud-config-server #配置中心服务名称
+      name: spring-config  # 对应{application}部分
+      profile: dev  # 对应{profile}部分
+      label: master  # 对应git的分支，如果配置中心使用的是本地存储，则该参数无用
+  rabbitmq:
+    host: 192.168.174.11
+    port: 5672
+    username: guest
+    password: guest
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"  #通过此配置，开放配置刷新接口/refresh （通过post请求访问 http://localhost:8552/actuator/refresh 以刷新配置）

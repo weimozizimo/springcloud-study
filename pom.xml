@@ -10,6 +10,8 @@
         <module>consumer2</module>
         <module>spring-cloud-consul-monitor</module>
         <module>spring-cloud-consul-zuul</module>
+        <module>spring-cloud-config-server</module>
+        <module>spring-cloud-config-client</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -19,9 +21,9 @@
     </parent>
 
     <groupId>com.wyf.spring.cloud</groupId>
-    <artifactId>demo1</artifactId>
+    <artifactId>com.wyf.spring.cloud.demo1</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>demo1</name>
+    <name>com.wyf.spring.cloud.demo1</name>
     <description>springcloud study</description>
 
     <properties>
@@ -53,6 +55,10 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-config</artifactId>
         </dependency>
 <!--        添加feign依赖-->
         <dependency>
@@ -88,7 +94,16 @@
             <version>1.16.20</version>
             <scope>provided</scope>
         </dependency>
-
+<!--        添加监控依赖，用来刷新配置-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+<!--        消息总线依赖-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bus-amqp</artifactId>
+        </dependency>
     </dependencies>
 
     <dependencyManagement>

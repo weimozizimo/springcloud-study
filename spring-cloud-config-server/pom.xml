@@ -10,8 +10,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.wyf.spring.cloud</groupId>
-    <artifactId>concumer1</artifactId>
+    <artifactId>spring-cloud-config-server</artifactId>
+    <name>微服务配置中心</name>
     <version>0.0.1-SNAPSHOT</version>
+    <description>微服务配置中心</description>
+
 
     <dependencies>
         <dependency>
@@ -21,6 +24,12 @@
             <type>pom</type>
             <scope>import</scope>
         </dependency>
+       <!-- springcloud配置中心依赖-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-config-server</artifactId>
+        </dependency>
     </dependencies>
+
 
 </project>

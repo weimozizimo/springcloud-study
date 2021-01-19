@@ -7,20 +7,15 @@
         <groupId>com.wyf.spring.cloud</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
+
     <modelVersion>4.0.0</modelVersion>
-
     <groupId>com.wyf.spring.cloud</groupId>
-    <artifactId>concumer1</artifactId>
+    <name>微服务配置中心客户端</name>
     <version>0.0.1-SNAPSHOT</version>
+    <description>用于测试配置中心服务</description>
+    <artifactId>spring-cloud-config-client</artifactId>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-dependencies</artifactId>
-            <version>${spring-cloud.version}</version>
-            <type>pom</type>
-            <scope>import</scope>
-        </dependency>
-    </dependencies>
+
+
 
 </project>

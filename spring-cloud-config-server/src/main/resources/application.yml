@@ -1,0 +1,28 @@
+server:
+  port: 8551
+spring:
+  application:
+    name: spring-cloud-config-server
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name} #注册到consul的名称
+    config:
+      server:
+        git:
+          uri: https://github.com/weimozizimo/springcloud-study.git        # 配置git仓库的地址
+          search-paths: config-repository                             # git仓库地址下的相对地址，可以配置多个，用,分割。
+          username: weimozizimo                                          # git仓库的账号
+          password: 970527wyfstc                                          # git仓库的密码
+  rabbitmq:
+    host: 192.168.174.11
+    port: 5672
+    username: guest
+    password: guest
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
